@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ det.img.url }}" width="300px" height="300px" >
+        </div>
+        <div class="col-md-6">
+            <h4>{{det.type}}</h4>
+            <h3>{{det.desc}}</h3>
+            <a class="btn btn-warning" href="{% url 'sthiraapp:update' det.id %}">update</a>
+            <a class="btn btn-warning" href="{% url 'sthiraapp:delete' det.id %}">delete</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
